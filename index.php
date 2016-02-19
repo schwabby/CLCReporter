@@ -3,12 +3,12 @@
 echo "Test for displaying MySQL Table in a browser";
 
 //make connection with the database
-mysql_connect('MattInvntryDB.uc1.rdbs.ctl.io:49183','matt','1222T@ylor');
+mysql_connect('DBHOSTNAME','USERNAME','PASSWORD');
 
 //select database
-mysql_select_db('test_schema');
+mysql_select_db('DBNAME');
 
-$sql="SELECT * FROM IHGResourceCount";
+$sql="SELECT * FROM TABLENAME";
 
 $records=mysql_query($sql);
 
