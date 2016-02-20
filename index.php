@@ -1,16 +1,15 @@
 <?php
 
-echo "Test for displaying MySQL Table in a browser";
+echo nl2br("\nInitializing index.php \n");
 
-//make connection with the database
-mysql_connect('DBHOSTNAME','USERNAME','PASSWORD');
+//MySQL Database connection
+include 'php/datalogin.php';
 
-//select database
-mysql_select_db('DBNAME');
-
+//MySQL select statement
 $sql="SELECT * FROM TABLENAME";
 
 $records=mysql_query($sql);
+
 
 ?>
 <html>
