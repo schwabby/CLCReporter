@@ -1,5 +1,8 @@
 <?php
 
+//show errors
+ini_set('display_errors', 1);
+
 //echo nl2br("\nInitializing index.php \n");
 
 //MySQL Database connection
