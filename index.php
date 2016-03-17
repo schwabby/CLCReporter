@@ -1,15 +1,15 @@
 <?php
 
-echo nl2br("\nInitializing index.php \n");
+//echo nl2br("\nInitializing index.php \n");
 
 //MySQL Database connection
 include 'php/datalogin.php';
 
 //MySQL select statement
-$sql="SELECT * FROM ARRS_Resources";
+$sql="SELECT * FROM CLCReporterDB.ARRS_Resources";
 
-$records=mysql_query($sql);
-$jsonOutput = array()
+$records=mysqli_query($connection, $sql);
+$jsonOutput = array();
 
 ?>
 <html>
@@ -34,7 +34,9 @@ $jsonOutput = array()
         </tr>
         <tr>
             <?php
-            while($day=mysql_fetch_assoc($records)){
+                  
+            while($day=mysqli_fetch_assoc($records))
+            {
                 echo "<tr>";
                 echo "<td>".$day['Date']."</td>";
                 echo "<td>".$day['Servers']."</td>";
